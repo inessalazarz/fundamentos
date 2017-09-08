@@ -1,0 +1,50 @@
+// Menurestaurante.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	float s=0,totalp,cantidad;
+	int opcion;
+	do{
+		cout<<"1.Hamburguesa con queso......45Bs"<<endl;
+		cout<<"2.Pizza familiar.............70Bs"<<endl;
+		cout<<"3.Malteadas..................15Bs"<<endl;
+		cout<<"4.Soda.......................10Bs"<<endl;
+		cout<<"0.Salir"<<endl;
+		cout<<"Ingrese opcion de menu: "<<endl;
+		cin>>opcion;
+		switch (opcion) {
+		case 1:cout<<"Ingrese la cantidad: ";
+			cin>>cantidad;
+			totalp=cantidad*45;
+			s=s+totalp;
+			break;
+		case 2:cout<<"Ingrese la cantidad: ";
+			cin>>cantidad;
+			totalp=cantidad*70;
+			s=s+totalp;
+			break;
+		case 3:cout<<"Ingrese la cantidad: ";
+			cin>>cantidad;
+			totalp=cantidad*15;
+			s=s+totalp;
+			break;
+		case 4:cout<<"Ingrese la cantidad: ";
+			cin>>cantidad;
+			totalp=cantidad*10;
+			s=s+totalp;
+			break;
+		case 0:cout<<"Salir";
+			break;
+		default:cout<<"Opcion invalida"<<endl;
+			break;
+		}
+	}while (opcion!=0);
+	cout<<"El total de la cuenta es: "<<totalp;
+	
+getch();
+		}
