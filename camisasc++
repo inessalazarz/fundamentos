@@ -1,0 +1,22 @@
+// Camisas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main(){
+	float numcamisas,total,preciosindesc;
+
+		cout<<"Ingrese el numero de camisas compradas: "<<endl;
+		cin>>numcamisas;
+		cout<<"Ingrese el precio de las camisas sin descuento: "<<endl;
+		cin>>preciosindesc;
+		if (numcamisas>=4)
+		{
+			total=preciosindesc-(preciosindesc*0.25);
+		}
+		else total=preciosindesc-(preciosindesc*0.15);
+		cout<<"El total con descuento es: "<<total<<endl;
+		getch();
+}
