@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int digito_menor(int N);
+
+	void main(){
+		int N,dm;
+		cout<<"Ingrese un numero distinto de 0"<<endl;
+		cin>>N;
+		dm= digito_menor(N);
+		cout<<dm;
+		getch();
+}
+
+int digito_menor(int N)
+{
+	int nm=9,d;
+	while(N>0)
+	{
+	
+	
+		d=N%10;
+		N=N/10;
+		if (d<nm)
+		{
+			nm=d;
+		}
+		 
+		
+
+	}
+	
+	
+	return nm;
+}
