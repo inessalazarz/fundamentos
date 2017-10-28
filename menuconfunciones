@@ -1,0 +1,73 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void Hola();
+int Menor(int A, int B, int C);
+float absoluto(float X);
+
+void main(){
+	int A,B,C,opcion,valmen;
+	float X,valab;
+	do{
+	cout<<"     Menu     "<<endl;
+	cout<<"1. Imprimir Hola "<<endl;
+	cout<<"2. Menor valor entre tres valores"<<endl;
+	cout<<"3. Valor absoluto de un numero "<<endl;
+	cout<<"0. Salir"<<endl;
+	cout<<"Escoja una opcion"<<endl;
+	cin>>opcion;
+	switch(opcion){
+	case 1: Hola();
+		break;
+	case 2: cout<<"Ingrese tres valores enteros respectivamente"<<endl;
+		    cin>>A;
+			cin>>B;
+			cin>>C;
+			valmen= Menor(A,B,C);
+			cout<<"El valor menor es: "<<valmen<<endl;
+			break;
+	case 3: cout<<"Ingrese un numero"<<endl;
+		    cin>>X;
+			valab= absoluto(X);
+			cout<<"El valor absoluto es: "<<valab<<endl;
+			break;
+	case 0: cout<<"Salir del programa"<<endl;
+		    break;
+	default: cout<<"Opción inválida"<<endl;
+	}
+	}while(opcion!=0);
+
+	getch();
+}
+
+void Hola(){
+	cout<<"Hola"<<endl;
+}
+ int Menor(int A,int B, int C){
+	 int valmen;
+	 valmen=A;
+	 if(B<A)
+	 {
+		 valmen=B;
+	 }
+	 else if(C<B)
+	 {
+		 valmen=C;
+	 }
+
+	 return valmen;
+ }
+
+ float absoluto(float X)
+ {
+	 float valab;
+	 if(X>0)
+	 {
+		 valab=X;
+	 }
+	 else valab=X*-1;
+	 return valab;
+ }
