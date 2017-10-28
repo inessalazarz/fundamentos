@@ -1,0 +1,36 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+float serie_factoriales(float x, int N);
+void main(){
+	float x,seriet;
+	int N;
+	
+	cout<<"Ingrese un valor para x: "<<endl;
+	cin>>x;
+	cout<<"Ingrese un valor para N: "<<endl;
+	cin>>N;
+	seriet= serie_factoriales(x,N);
+	cout<<"El resultado de la serie es: "<<seriet<<endl;
+	getch();
+	
+}
+
+float serie_factoriales(float x, int N)
+{
+	int factorial=1;
+	float S=3.1416/5,P;
+	for(int i=2;i<=N;i=i+2)
+	{
+		for(int I=1;I<=i;I++)
+		{
+			factorial=factorial*I;
+		}
+		P=pow(x,i)/factorial;
+		P=P*(-1);
+		S=S+P;
+		return S;
+	}
+}
