@@ -1,0 +1,35 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main(){
+	int h1,m1,s1,h2,m2,s2,ss1,ss2,sct,st,mt,ht;
+
+	cout<<"Ingrese una primera hora minuto y segundo"<<endl;
+	cin>>h1;
+	cin>>m1;
+	cin>>s1;
+	cout<<"Ingrese una segunda hora minuto y segundo"<<endl;
+	cin>>h2;
+	cin>>m2;
+	cin>>s2;
+
+	ss1=(h1*3600)+(m1*60)+s1;
+	ss2=(h2*3600)+(m2*60)+s2;
+
+	if(ss1>=ss2)
+	{
+		sct=ss1-ss2;
+	}
+	else 
+		sct=ss2-ss1;
+
+
+	st=(sct%60);
+	mt=(sct/60)%60;
+	ht=((sct/60)/60);
+
+	cout<<" La diferencia de hora es: "<<ht<< " horas " <<mt<< " minutos " <<st<< " segundos " <<endl;
+	getch();
