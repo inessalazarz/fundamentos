@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int sum_pares(int n);
+
+void main ()
+{
+	int n, S;
+	cout<<"Ingrese un numero : ";
+	cin>>n;
+	S=sum_pares(n);
+	cout<<"La sumatoria es : "<<S<<endl;
+	getch ();
+}
+
+int sum_pares(int n)
+{
+	int S=0,I=1,d;
+	for(I;I<=n;I=I+1)
+	{
+	if (0==n%2){
+	d=n%10;
+	S=S+d;
+	n=n/10;
+	}
+	}
+	return S;
+}
